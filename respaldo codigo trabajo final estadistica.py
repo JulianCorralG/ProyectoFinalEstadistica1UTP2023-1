@@ -23,20 +23,20 @@ def calcular_distribucion():
     
     # Mensaje de alerta si la hoja es "Seleccione una hoja"
     if hoja_seleccionada == "Seleccione una hoja":
-        ###ventana_principal.after(200, reproducir_audio_hojaNOvalida)  # Reproducir audio después de 1 segundo = 1000
+        ###ventana_principal.after(200, reproducir_audio_hojaNOvalida)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
         messagebox.showinfo("Error", "Por favor, seleccione una hoja válida.")
         return
 
     # Mensaje de alerta si la columna es "Seleccioine una columna"
     if columna_seleccionada == "Seleccione una columna":
-        ###ventana_principal.after(200, reproducir_audio_columnaNOvalida)  # Reproducir audio después de 1 segundo = 1000
+        ###ventana_principal.after(200, reproducir_audio_columnaNOvalida)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
         messagebox.showinfo("Error", "Por favor, seleccione una columna válida.")
         return
     
     # Mensaje de alerta si no se ha ingresado nada en el valor de x
     if valor_x == "":
     #if isinstance(valor_x, str):
-        ###ventana_principal.after(200, reproducir_audio_xNOvalida)  # Reproducir audio después de 1 segundo = 1000
+        ###ventana_principal.after(200, reproducir_audio_xNOvalida)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
         messagebox.showwarning("Valor no ingresado", "Por favor, ingresa un valor de x.")
         return
     
@@ -151,7 +151,7 @@ def calcular_distribucion():
     ax2.legend(loc='upper right', fontsize='small', handlelength=2, frameon=True)  # Ubicar la leyenda en la esquina superior derecha y letra pequeña
     ax2.grid(True)
 
-    #ventana_principal.after(200, reproducir_audio_grafica)  # Reproducir audio después de 1 segundo = 1000
+    #ventana_principal.after(200, reproducir_audio_grafica)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
 
 
     # Mostrar las gráficas
@@ -161,8 +161,8 @@ def calcular_distribucion():
 # Función para confirmar el cierre del programa
 def confirmar_cierre():
     
-    ###ventana_principal.after(200, reproducir_audio_confirmacioncierre)  # Reproducir audio después de 1 segundo = 1000
-    ###ventana_principal.after(200, reproducir_audio_despedida)  # Reproducir audio después de 1 segundo = 1000
+    ###ventana_principal.after(200, reproducir_audio_confirmacioncierre)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
+    ###ventana_principal.after(200, reproducir_audio_despedida)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
     if messagebox.askyesno("Confirmación", "¿Estás seguro de que deseas cerrar el programa?"):
         ventana_principal.destroy()
         ventana_inicio.destroy()
@@ -190,9 +190,9 @@ def abrir_archivo():
             seleccionar_hoja("Seleccione una hoja")  # Actualizar las columnas del menú para la opción "Seleccione una hoja"
             ventana_inicio.withdraw()  # Ocultar la primera ventana
             ventana_principal.deiconify()  # Mostrar la ventana principal
-            ###ventana_principal.after(200, reproducir_audio_ventana_principal)  # Reproducir audio después de 1 segundo = 1000
+            ###ventana_principal.after(200, reproducir_audio_ventana_principal)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
         except Exception as e:
-            #ventana_principal.after(200, reproducir_audio_archivoNOabierto)  # Reproducir audio después de 1 segundo = 1000
+            #ventana_principal.after(200, reproducir_audio_archivoNOabierto)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
             messagebox.showinfo("Error", f"No se pudo abrir el archivo:\n{e}")
 
 # Función para actualizar los datos mostrados en pantalla
@@ -296,7 +296,7 @@ def reproducir_audio_grafica():
 ventana_inicio = tk.Tk()
 ventana_inicio.title("Carga de datos de Excel")
 ventana_inicio.geometry("400x300")
-###ventana_inicio.after(200, reproducir_audio_bienvenida)  # Reproducir audio después de 1 segundo = 1000
+###ventana_inicio.after(200, reproducir_audio_bienvenida)  # Reproducir audio después de 1 segundo = 1000 # Descomentar linea para tener audio
 
 # Titulo de la ventana inicio
 etiqueta_inicio = tk.Label(ventana_inicio, text="Bienvenido,\npara iniciar por favor\nbusque y abra el archivo de Excel \ncon el que desea trabajar", font=("Arial", 14))
